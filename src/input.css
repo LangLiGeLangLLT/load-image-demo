@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.blurred-img > img {
+  @apply opacity-0 transition-opacity ease-in-out duration-200;
+}
+
+.blurred-img[data-loaded="true"] > img {
+  @apply opacity-100;
+}
+
+.blurred-img {
+  @apply blur before:absolute before:inset-0 before:opacity-0 before:animate-[pulse_2s_infinite] before:bg-white;
+}
+
+.blurred-img[data-loaded="true"] {
+  @apply blur-none before:content-none before:animate-none;
+}

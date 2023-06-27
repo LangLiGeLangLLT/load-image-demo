@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="output.css" rel="stylesheet">
+</head>
+<body>
+  <div class="grid grid-cols-2">
+    <div class="blurred-img bg-[url('assets/img01-small.jpg')] bg-cover bg-center bg-no-repeat relative">
+      <img class="w-full aspect-square object-cover object-center" loading="lazy" src="assets/img01.jpg">
+    </div>
+    <div class="blurred-img bg-[url('assets/img02-small.jpg')] bg-cover bg-center bg-no-repeat relative">
+      <img class="w-full aspect-square object-cover object-center" loading="lazy" src="assets/img02.jpg">
+    </div>
+    <div class="blurred-img bg-[url('assets/img03-small.jpg')] bg-cover bg-center bg-no-repeat relative">
+      <img class="w-full aspect-square object-cover object-center" loading="lazy" src="assets/img03.jpg">
+    </div>
+    <div class="blurred-img bg-[url('assets/img04-small.jpg')] bg-cover bg-center bg-no-repeat relative">
+      <img class="w-full aspect-square object-cover object-center" loading="lazy" src="assets/img04.jpg">
+    </div>
+    <div class="blurred-img bg-[url('assets/img05-small.jpg')] bg-cover bg-center bg-no-repeat relative">
+      <img class="w-full aspect-square object-cover object-center" loading="lazy" src="assets/img05.jpg">
+    </div>
+    <div class="blurred-img bg-[url('assets/img06-small.jpg')] bg-cover bg-center bg-no-repeat relative">
+      <img class="w-full aspect-square object-cover object-center" loading="lazy" src="assets/img06.jpg">
+    </div>
+    <div class="blurred-img bg-[url('assets/img07-small.jpg')] bg-cover bg-center bg-no-repeat relative">
+      <img class="w-full aspect-square object-cover object-center" loading="lazy" src="assets/img07.jpg">
+    </div>
+    <div class="blurred-img bg-[url('assets/img08-small.jpg')] bg-cover bg-center bg-no-repeat relative">
+      <img class="w-full aspect-square object-cover object-center" loading="lazy" src="assets/img08.jpg">
+    </div>
+    <div class="blurred-img bg-[url('assets/img09-small.jpg')] bg-cover bg-center bg-no-repeat relative">
+      <img class="w-full aspect-square object-cover object-center" loading="lazy" src="assets/img09.jpg">
+    </div>
+    <div class="blurred-img bg-[url('assets/img10-small.jpg')] bg-cover bg-center bg-no-repeat relative">
+      <img class="w-full aspect-square object-cover object-center" loading="lazy" src="assets/img10.jpg">
+    </div>
+    <div class="blurred-img bg-[url('assets/img11-small.jpg')] bg-cover bg-center bg-no-repeat relative">
+      <img class="w-full aspect-square object-cover object-center" loading="lazy" src="assets/img11.jpg">
+    </div>
+    <div class="blurred-img bg-[url('assets/img12-small.jpg')] bg-cover bg-center bg-no-repeat relative">
+      <img class="w-full aspect-square object-cover object-center" loading="lazy" src="assets/img12.jpg">
+    </div>
+    <div class="blurred-img bg-[url('assets/img13-small.jpg')] bg-cover bg-center bg-no-repeat relative">
+      <img class="w-full aspect-square object-cover object-center" loading="lazy" src="assets/img13.jpg">
+    </div>
+    <div class="blurred-img bg-[url('assets/img14-small.jpg')] bg-cover bg-center bg-no-repeat relative">
+      <img class="w-full aspect-square object-cover object-center" loading="lazy" src="assets/img14.jpg">
+    </div>
+    <div class="blurred-img bg-[url('assets/img15-small.jpg')] bg-cover bg-center bg-no-repeat relative">
+      <img class="w-full aspect-square object-cover object-center" loading="lazy" src="assets/img15.jpg">
+    </div>
+    <div class="blurred-img bg-[url('assets/img16-small.jpg')] bg-cover bg-center bg-no-repeat relative">
+      <img class="w-full aspect-square object-cover object-center" loading="lazy" src="assets/img16.jpg">
+    </div>
+    <div class="blurred-img bg-[url('assets/img17-small.jpg')] bg-cover bg-center bg-no-repeat relative">
+      <img class="w-full aspect-square object-cover object-center" loading="lazy" src="assets/img17.jpg">
+    </div>
+    <div class="blurred-img bg-[url('assets/img18-small.jpg')] bg-cover bg-center bg-no-repeat relative">
+      <img class="w-full aspect-square object-cover object-center" loading="lazy" src="assets/img18.jpg">
+    </div>
+  </div>
+  <script>
+    const blurDiv = document.querySelectorAll('.blurred-img')
+    blurDiv.forEach(div => {
+      const img = div.querySelector('img')
+
+      function loaded() {
+        div.dataset.loaded = true
+      }
+
+      if (img.complete) {
+        loaded()
+      } else {
+        img.addEventListener('load', loaded)
+      }
+    })
+  </script>
+</body>
+</html>
